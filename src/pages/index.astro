@@ -1,0 +1,140 @@
+---
+import BuiltByDrizzleTeam from "@/ui/components/BuiltByDrizzleTeam.astro";
+import Layout from "../ui/Layout.astro";
+import Main from "@/content/landing/main.mdx";
+---
+
+<Layout title="Drizzle Gateway">
+  <div class="wrap">
+    <div class="landing__wrap">
+      <div class="landing__title-wrap">
+        <div class="landing__title">Drizzle Gateway</div>
+      </div>
+      <div class="landing__description">
+        Self-hostable version of Drizzle Studio
+      </div>
+      <div class="landing__name-meaning">
+        Built <a href="https://drizzle.team">by drizzle.team</a>
+      </div>
+      <BuiltByDrizzleTeam />
+      <!-- <a href="/docs/overview" class="landing__documentation-btn"
+        ><div>Donate</div>
+      </a> -->
+    </div>
+    <div class="documentation-container">
+      <div class="documentation-content">
+        <Main />
+      </div>
+    </div>
+  </div>
+  <script
+    defer
+    data-site-id="gateway.drizzle.team"
+    src="https://assets.onedollarstats.com/tracker.js"></script>
+  <style is:global>
+    html[class~="dark"] .landing__title {
+      color: #e2e8f0;
+    }
+    html[class~="dark"] .landing__description {
+      color: #e2e8f0;
+    }
+
+    html[class~="dark"] .landing__name-meaning {
+      color: #999;
+    }
+
+    .wrap {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 72px;
+      padding: 100px 0;
+    }
+    .landing__wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .landing__title-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .landing__title {
+      margin-left: 4px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .landing__description {
+      width: 100%;
+      font-size: 20px;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    .landing__name-meaning {
+      margin-top: 4px;
+      font-size: 14px;
+      color: #727272;
+    }
+
+    html[class~="dark"] .landing__documentation-btn {
+      background-color: #e2e8f0;
+      color: #282828;
+    }
+
+    .landing__documentation-btn {
+      margin-top: 80px;
+      width: 212px;
+      border-radius: 3px;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1;
+      height: 48px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: #282b3b;
+      gap: 10px;
+    }
+
+    .documentation-container {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .documentation-content {
+      padding-left: 48px;
+      padding-right: 40px;
+      padding-top: 16px;
+      width: 100%;
+      max-width: 994px;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      .documentation-content {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 1rem;
+        width: 100%;
+      }
+    }
+  </style>
+  <script>
+    window.addEventListener("beforeunload", () => {
+      localStorage.setItem("sidebar-scroll", "0");
+    });
+  </script>
+</Layout>
