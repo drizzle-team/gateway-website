@@ -1,0 +1,112 @@
+html[class~="dark"] .core_team_container:hover {
+    background-color: #1d1d1d;
+    color: #fff;
+  }
+
+  html[class~="dark"] .core_team_container {
+    background-color: #181818;
+    border: 1px solid #262626;
+  }
+
+  .core_team_container {
+    border: 1px solid #e0e0e0;
+    color: #909090;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 16px 4px 4px;
+    border-radius: 50px;
+    background-color: #fafafa;
+    transition:
+      background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+  }
+
+  .core_team_container:hover {
+    background-color: #f7f7f7;
+    color: #000;
+  }
+
+  .core_team_member {
+    position: relative;
+  }
+
+  .core_team_member:not(:first-child) {
+    margin-left: -6px;
+  }
+
+  .core_team_member:hover .core_team_member-name {
+    opacity: 1;
+  }
+
+  .core_team_member:hover {
+    z-index: 10 !important;
+  }
+
+  html[class~="dark"] .core_team_member-name {
+    background: #000;
+    box-shadow:
+      0 0 0 0 transparent,
+      0 0 0 0 transparent,
+      0 0 0 1px #fff3,
+      0 1px 2px #0000001a,
+      0 2px 4px #00000013;
+  }
+
+  html[class~="dark"] .core_team_member-name {
+    color: #e2e8f0;
+  }
+
+  .core_team_member-name {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow:
+      0 0 #fff,
+      0 0 0 1px #00000014,
+      0 1px 2px #0000001a,
+      0 2px 4px #00000013;
+    font-size: 14px;
+    font-weight: 400;
+    left: 50%;
+    opacity: 0;
+    padding: 4px 12px;
+    pointer-events: none;
+    position: absolute;
+    top: -35px;
+    transform: translate(-50%);
+    white-space: nowrap;
+    color: #222;
+  }
+
+  html[class~="dark"] .core_team_container:hover .core_team_photo {
+    border: 2px solid #1d1d1d;
+  }
+
+  .core_team_container:hover .core_team_photo {
+    border: 2px solid #f7f7f7;
+  }
+
+  .core_team_member:hover .core_team_photo {
+    filter: grayscale(0);
+  }
+
+  html[class~="dark"] .core_team_photo {
+    border: 2px solid #181818;
+  }
+
+  .core_team_photo {
+    border: 2px solid #fafafa;
+    width: 28px;
+    height: 28px;
+    filter: grayscale(1);
+    border-radius: 50%;
+    transition:
+      filter 0.2s ease-in-out,
+      border 0.2s ease-in-out;
+  }
+
+  .core_team_container-built-by {
+    font-size: 13px;
+    margin-left: 10px;
+  }

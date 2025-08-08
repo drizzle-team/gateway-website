@@ -4,6 +4,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
+import tailwindcss from "@tailwindcss/vite";
 import {
   codeSnippetTransformer,
 } from './src/transformers';
@@ -24,6 +25,7 @@ export default defineConfig({
     format: "file", // mandatory due to CloudFlare Pages trailing slash problem
   },
   vite: {
+    plugins: [tailwindcss()],
     css: {
       preprocessorOptions: {
         scss: {
