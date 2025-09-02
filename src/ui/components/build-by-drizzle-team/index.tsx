@@ -10,7 +10,10 @@ export const BuiltByDrizzleTeam = () => {
       <DonationDialog open={open} setOpen={setOpen} />
       <div
         style={{ marginTop: "32px", cursor: "pointer" }}
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setOpen(true);
+          (window as any)?.stonks?.event?.("click-team");
+        }}
       >
         <div className="core_team_container">
           <div
@@ -63,6 +66,9 @@ export const BuiltByDrizzleTeam = () => {
         className="mt-8"
         href="https://railway.com/deploy/drizzle-studio-gat-1?referralCode=eobqmj&utm_medium=integration&utm_source=template&utm_campaign=generic"
         target="_blank"
+        onClick={() => {
+          (window as any)?.stonks?.event?.("click-deploy-railway");
+        }}
       >
         <img src="https://railway.com/button.svg" alt="Deploy on Railway" />
       </a>
@@ -70,7 +76,10 @@ export const BuiltByDrizzleTeam = () => {
         <Button
           variant="link"
           className="h-fit p-0 text-muted-foreground"
-          onClick={() => setOpen(true)}
+          onClick={() => {
+            setOpen(true);
+            (window as any)?.stonks?.event?.("click-love");
+          }}
         >
           I love it &#x2661;
         </Button>

@@ -196,6 +196,7 @@ export const DonationDialog = ({ open, setOpen }: Props) => {
                 "https://donate.stripe.com/fZeaFu3CG0NucOQ004?client_reference_id=drizzle-gateway",
                 "_blank",
               );
+              (window as any)?.stonks?.event?.("click-donate");
             }}
           >
             <HeartFilledIcon
