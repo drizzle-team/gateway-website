@@ -12,7 +12,7 @@ export const BuiltByDrizzleTeam = () => {
         style={{ marginTop: "32px", cursor: "pointer" }}
         onClick={() => {
           setOpen(true);
-          (window as any)?.stonks?.event?.("click-team");
+          (window as any)?.trackCustomEvent?.("click-team");
         }}
       >
         <div className="core_team_container">
@@ -67,7 +67,7 @@ export const BuiltByDrizzleTeam = () => {
         href="https://railway.com/deploy/drizzle-studio-gat-1?referralCode=eobqmj&utm_medium=integration&utm_source=template&utm_campaign=generic"
         target="_blank"
         onClick={() => {
-          (window as any)?.stonks?.event?.("click-deploy-railway");
+          (window as any)?.trackCustomEvent?.("click-deploy-railway");
         }}
       >
         <img src="https://railway.com/button.svg" alt="Deploy on Railway" />
@@ -78,7 +78,7 @@ export const BuiltByDrizzleTeam = () => {
           className="h-fit p-0 text-muted-foreground"
           onClick={() => {
             setOpen(true);
-            (window as any)?.stonks?.event?.("click-love");
+            (window as any)?.trackCustomEvent?.("click-love");
           }}
         >
           I love it &#x2661;
