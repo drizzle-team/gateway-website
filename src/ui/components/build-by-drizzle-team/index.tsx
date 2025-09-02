@@ -59,8 +59,19 @@ export const BuiltByDrizzleTeam = () => {
           </div>
         </div>
       </div>
+      <a
+        className="mt-8"
+        href="https://railway.com/deploy/drizzle-studio-gat-1?referralCode=eobqmj&utm_medium=integration&utm_source=template&utm_campaign=generic"
+        target="_blank"
+      >
+        <img src="https://railway.com/button.svg" alt="Deploy on Railway" />
+      </a>
       <div className="flex flex-col items-end justify-center w-full px-[55px] mt-[52px]">
-        <Button variant="link" className="h-fit p-0 text-muted-foreground" onClick={() => setOpen(true)}>
+        <Button
+          variant="link"
+          className="h-fit p-0 text-muted-foreground"
+          onClick={() => setOpen(true)}
+        >
           I love it &#x2661;
         </Button>
       </div>
