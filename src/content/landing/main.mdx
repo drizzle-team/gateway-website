@@ -8,7 +8,7 @@ import Callout from '@mdx/Callout.astro';
 docker pull ghcr.io/drizzle-team/gateway:latest
 
 # persistent volume is required for configuration file
-docker volume create drizzle-gateway 
+docker volume create drizzle-gateway
 
 # start the studio
 docker run -d \
@@ -28,7 +28,7 @@ docker run -d \
 mkdir drizzle-gateway
 cd drizzle-gateway
 
-curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.4-linux-arm64
+curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.5-linux-arm64
 
 chmod +x start
 ./start
@@ -40,7 +40,7 @@ chmod +x start
 mkdir drizzle-gateway
 cd drizzle-gateway
 
-curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.4-linux-x64
+curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.5-linux-x64
 
 chmod +x start
 ./start
@@ -52,7 +52,7 @@ chmod +x start
 mkdir drizzle-gateway
 cd drizzle-gateway
 
-curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.4-macos-arm64
+curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.5-macos-arm64
 
 chmod +x start
 ./start
@@ -64,7 +64,7 @@ chmod +x start
 mkdir drizzle-gateway
 cd drizzle-gateway
 
-curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.4-macos-x64
+curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.5-macos-x64
 
 chmod +x start
 ./start
@@ -74,15 +74,15 @@ chmod +x start
 </CodeTabs>
 
 <Callout collapsed="How it works?">
-Drizzle Studio server hosts an admin panel, which you can visit on `host:port`.  
-  
-Drizzle Gateway is compatible with both `arm` and `amd` architectures, you can use it on both MacOS(intel/m chips) and linux, whichever you prefer.  
-  
-It runs a Drizzle Gateway Server on `:4983` port, you can override it by providing `PORT` environment variable if needed.  
-IMPORTANT: make sure to mount a persistent storage with `/app` root for Docker container, it’s required to have a place where to store your session and recover on server restarts.  
-  
-To override `/app` root path - provide `STORE_PATH` environment variable.  
-  
+Drizzle Studio server hosts an admin panel, which you can visit on `host:port`.
+
+Drizzle Gateway is compatible with both `arm` and `amd` architectures, you can use it on both MacOS(intel/m chips) and linux, whichever you prefer.
+
+It runs a Drizzle Gateway Server on `:4983` port, you can override it by providing `PORT` environment variable if needed.
+IMPORTANT: make sure to mount a persistent storage with `/app` root for Docker container, it’s required to have a place where to store your session and recover on server restarts.
+
+To override `/app` root path - provide `STORE_PATH` environment variable.
+
 You can provide `MASTERPASS` env variably to have protected admin access, it will also unlock the `passcode` feature which you will be able to set for others to have protected access and without ability to change passcode.
 </Callout>
 
@@ -91,6 +91,10 @@ You can provide `MASTERPASS` env variably to have protected admin access, it wil
 }} />
 ## Changelog
 Subscribe to updates on [Twitter](https://twitter.com/DrizzleORM) or [Discord](https://driz.link/discord)
+
+#### `v1.0.5 03/09/2025`
+- Added native container health check via the `/health` endpoint.
+  (No need to define a custom healthcheck in Docker or Compose.)
 
 #### `v1.0.4 03/09/2025`
 - Added `/health` endpoint.
