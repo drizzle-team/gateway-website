@@ -28,7 +28,7 @@ docker run -d \
 mkdir drizzle-gateway
 cd drizzle-gateway
 
-curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.5-linux-arm64
+curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.6-linux-arm64
 
 chmod +x start
 ./start
@@ -40,7 +40,7 @@ chmod +x start
 mkdir drizzle-gateway
 cd drizzle-gateway
 
-curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.5-linux-x64
+curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.6-linux-x64
 
 chmod +x start
 ./start
@@ -52,7 +52,7 @@ chmod +x start
 mkdir drizzle-gateway
 cd drizzle-gateway
 
-curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.5-macos-arm64
+curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.6-macos-arm64
 
 chmod +x start
 ./start
@@ -64,7 +64,7 @@ chmod +x start
 mkdir drizzle-gateway
 cd drizzle-gateway
 
-curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.5-macos-x64
+curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.6-macos-x64
 
 chmod +x start
 ./start
@@ -91,6 +91,10 @@ You can provide `MASTERPASS` env variably to have protected admin access, it wil
 }} />
 ## Changelog
 Subscribe to updates on [Twitter](https://twitter.com/DrizzleORM) or [Discord](https://driz.link/discord)
+
+#### `v1.0.6 16/09/2025`
+- Reduced image size after rapid increase in version `1.0.5`.\
+  _(from 226.3MB to 111.7MB)_
 
 #### `v1.0.5 15/09/2025`
 - Added native container health check via the `/health` endpoint.\
