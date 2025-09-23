@@ -1,0 +1,42 @@
+# Deploy and Host Drizzle Gateway on Railway
+
+Drizzle Gateway is a self-hosted, browser-based interface for exploring and managing your database schema using the Drizzle ORM ecosystem.
+It acts as a gateway between your database and Drizzle Studio’s frontend, enabling secure connections, schema introspection, and query execution directly from your own infrastructure instead of relying on a public service.
+
+## About Hosting Drizzle Gateway
+
+Hosting Drizzle Gateway means deploying a small React.js/Node.js service that exposes the Drizzle Studio UI connected to your database.
+This service communicates securely with your database, making it accessible only via your Railway environment (or with controlled public access).
+
+With this Railway deployment template, you get:
+
+- An **admin (master) password** for full unrestricted access.
+- Ability to **set separate user password** with limited access.
+- **Multiple database connections** in a single instance.
+- **Persistent storage** for configurations and session data.
+
+Once deployed, you can use Drizzle Studio in your browser to explore, query, and modify your database, all within a private, self-controlled environment.
+Railway’s hosting takes care of deployment, scaling, and uptime so you can focus on database management without local setups.
+
+## Common Use Cases
+
+- Visualizing and editing database schema.
+- Running SQL queries and inspecting results without leaving your browser.
+- Providing a secure, team-accessible environment for database management in staging or production.
+
+## Dependencies for Drizzle Gateway Hosting
+
+- Database connection — PostgreSQL, MySQL, SQLite, D1 or Turso and many more to come
+
+### Deployment Dependencies
+
+- [Drizzle Gateway](https://gateway.drizzle.team)
+- [Drizzle Studio](https://orm.drizzle.team/drizzle-studio/overview)
+- [Railway Documentation](https://orm.drizzle.team)
+- [Drizzle ORM Documentation](https://docs.railway.app)
+
+### Why Deploy Drizzle Gateway on Railway?
+
+Railway is a singular platform to deploy your infrastructure stack. Railway will host your infrastructure so you don't have to deal with configuration, while allowing you to vertically and horizontally scale it.
+
+By deploying Drizzle Gateway on Railway, you are one step closer to supporting a complete full-stack application with minimal burden. Host your servers, databases, AI agents, and more on Railway.

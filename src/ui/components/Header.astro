@@ -1,50 +1,51 @@
 ---
-import ThemeSelector from "./ThemeSelector.astro";
-import GithubStars from "./GithubStars.astro";
-import DocsIcon from "../../assets/icons/DocsIcon.astro";
+import ThemeSelector from './ThemeSelector.astro';
+import GithubStars from './GithubStars.astro';
+import DocsIcon from '../../assets/icons/DocsIcon.astro';
 ---
 
 <div class="header" id="header">
   <div class="header_content">
     <div class="header__logo">
       <a href="/" class="logo-wrap">
-        <span class="logo">🦆</span>
-        Waddler
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M8.422 20.618C10.178 21.54 11.056 22 12 22V12L2.638 7.073a3.196 3.196 0 0 0-.04.067C2 8.154 2 9.417 2 11.942v.117c0 2.524 0 3.787.597 4.801c.598 1.015 1.674 1.58 3.825 2.709z"
+            data-astro-cid-wx2hukk6=""></path>
+          <path
+            fill="currentColor"
+            d="m17.577 4.432l-2-1.05C13.822 2.461 12.944 2 12 2c-.945 0-1.822.46-3.578 1.382l-2 1.05C4.318 5.536 3.242 6.1 2.638 7.072L12 12l9.362-4.927c-.606-.973-1.68-1.537-3.785-2.641"
+            opacity="0.7"
+            data-astro-cid-wx2hukk6=""></path>
+          <path
+            fill="currentColor"
+            d="M21.403 7.14a3.153 3.153 0 0 0-.041-.067L12 12v10c.944 0 1.822-.46 3.578-1.382l2-1.05c2.151-1.129 3.227-1.693 3.825-2.708c.597-1.014.597-2.277.597-4.8v-.117c0-2.525 0-3.788-.597-4.802"
+            opacity="0.5"
+            data-astro-cid-wx2hukk6=""></path>
+          <path
+            fill="currentColor"
+            d="m6.323 4.484l.1-.052l1.493-.784l9.1 5.005l4.025-2.011c.137.155.257.32.362.498c.15.254.262.524.346.825L17.75 9.964V13a.75.75 0 0 1-1.5 0v-2.286l-3.5 1.75v9.44A3.062 3.062 0 0 1 12 22c-.248 0-.493-.032-.75-.096v-9.44l-8.998-4.5c.084-.3.196-.57.346-.824a3.15 3.15 0 0 1 .362-.498l9.04 4.52l3.387-1.693z"
+            data-astro-cid-wx2hukk6=""></path>
+        </svg>
+        Drizzle Gateway
       </a>
       <a class="docs-logo" href="/docs/overview">
-        <div class="docs-logo-icon"><DocsIcon/></div>
+        <div class="docs-logo-icon"><DocsIcon /></div>
         <span>Documentation</span>
       </a>
     </div>
     <div class="header_nav">
-      <GithubStars />
+      <!-- <GithubStars /> -->
       <ThemeSelector />
       <div class="burger" data-nav-burger-btn>
-        <svg
-          fill="none"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
+        <svg fill="none" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor">
           <g>
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
           </g>
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 12h16"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
           <g>
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 18h16"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
           </g>
         </svg>
       </div>
@@ -68,11 +69,11 @@ import DocsIcon from "../../assets/icons/DocsIcon.astro";
       0 0 0 0 transparent,
       0 2px 4px #00000005,
       0 1px #0000000f;
-    
+
     z-index: 100;
     position: fixed;
-      left: 0;
-      right: 0;
+    left: 0;
+    right: 0;
     top: 0px;
   }
 
@@ -114,29 +115,29 @@ import DocsIcon from "../../assets/icons/DocsIcon.astro";
   }
 
   .docs-logo {
-      display: flex;
-      gap: 6px;
-      align-items: center;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 6px 8px;
-      border-radius: 4px;
-      background-color: #f6f6f7;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 8px;
+    border-radius: 4px;
+    background-color: #f6f6f7;
   }
 
   html.dark .docs-logo {
-      background-color: #1a1a1a;
-      color: #c8c9ca;
+    background-color: #1a1a1a;
+    color: #c8c9ca;
   }
 
   .docs-logo-icon {
-      color: #555;
-      fill: #cccccc;
+    color: #555;
+    fill: #cccccc;
   }
 
   html.dark .docs-logo-icon {
-      color: #949393;
-      fill: #c8c9ca;
+    color: #949393;
+    fill: #c8c9ca;
   }
 
   .header_nav {
@@ -157,7 +158,7 @@ import DocsIcon from "../../assets/icons/DocsIcon.astro";
   }
 
   html.dark .burger {
-      color: #c4c5c6;
+    color: #c4c5c6;
   }
 
   .header_nav__link {
@@ -180,24 +181,24 @@ import DocsIcon from "../../assets/icons/DocsIcon.astro";
   }
 
   .progress-wrap {
-      width: 200px;
+    width: 200px;
   }
 
   @media screen and (max-width: 1260px) {
-      .progress-wrap {
-          display: none;
-      }
+    .progress-wrap {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 914px) {
-      .docs-logo  {
-          height: 33px;
-          padding: 6px 8px;
-      }
+    .docs-logo {
+      height: 33px;
+      padding: 6px 8px;
+    }
 
-      .docs-logo span {
-          display: none;
-      }
+    .docs-logo span {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -205,8 +206,8 @@ import DocsIcon from "../../assets/icons/DocsIcon.astro";
       display: none;
     }
 
-    .docs-logo  {
-        display: none;
+    .docs-logo {
+      display: none;
     }
 
     .header_content {
@@ -217,20 +218,23 @@ import DocsIcon from "../../assets/icons/DocsIcon.astro";
 </style>
 <script is:inline>
   const toggleBurgerMenu = () => {
-    document.getElementById("header").classList.toggle("nav_container_open");
-    document.getElementById("aside").classList.toggle("invisible");
-    document.body.style.overflow = document.getElementById("header").classList.contains(
-      "nav_container_open",
-    )
-      ? "hidden"
-      : "auto";
+    document.getElementById('header').classList.toggle('nav_container_open');
+    document.getElementById('aside').classList.toggle('invisible');
+    document.body.style.overflow = document.getElementById('header').classList.contains('nav_container_open')
+      ? 'hidden'
+      : 'auto';
   };
 
-  document.addEventListener("astro:page-load", () => {
-    document.querySelector("[data-nav-burger-btn]").removeEventListener("click", toggleBurgerMenu, false)
-    if (document.querySelector("[data-nav-burger-btn]") && document.getElementById("header") && document.getElementById("aside")) {
-      document.querySelector("[data-nav-burger-btn]").addEventListener("click", toggleBurgerMenu)
-  }})
+  document.addEventListener('astro:page-load', () => {
+    document.querySelector('[data-nav-burger-btn]').removeEventListener('click', toggleBurgerMenu, false);
+    if (
+      document.querySelector('[data-nav-burger-btn]') &&
+      document.getElementById('header') &&
+      document.getElementById('aside')
+    ) {
+      document.querySelector('[data-nav-burger-btn]').addEventListener('click', toggleBurgerMenu);
+    }
+  });
 </script>
 
 <style>
@@ -241,7 +245,7 @@ import DocsIcon from "../../assets/icons/DocsIcon.astro";
     width: 100%;
   }
 
-  html[class~="dark"] .nav_container_blur {
+  html[class~='dark'] .nav_container_blur {
     background-color: rgba(18, 18, 18, 0.8);
     box-shadow:
       0 0 transparent,
@@ -359,7 +363,7 @@ import DocsIcon from "../../assets/icons/DocsIcon.astro";
     .nav_container {
       top: 0px;
     }
-    body[class~="banner-shown"] .nav_container {
+    body[class~='banner-shown'] .nav_container {
       top: 40px;
     }
     .nav_desktop {
