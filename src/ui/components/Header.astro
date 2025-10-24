@@ -30,9 +30,17 @@ import DocsIcon from '../../assets/icons/DocsIcon.astro';
         </svg>
         Drizzle Gateway
       </a>
-      <a class="docs-logo" href="/docs/overview">
+      <!-- <a class="docs-logo" href="/docs/overview">
         <div class="docs-logo-icon"><DocsIcon /></div>
         <span>Documentation</span>
+      </a> -->
+      <a
+        class="deploy-railway"
+        href="https://railway.com/new/template/drizzle-studio-gateway?referralCode=eobqmj&utm_medium=integration&utm_source=button&utm_campaign=drizzle-studio-gateway"
+        target="_blank"
+        data-s-event="click-deploy-railway"
+      >
+        <img src="https://railway.com/button.svg" alt="Deploy on Railway" />
       </a>
     </div>
     <div class="header_nav">
@@ -54,6 +62,10 @@ import DocsIcon from '../../assets/icons/DocsIcon.astro';
 </div>
 
 <style>
+  .deploy-railway img {
+    height: 32px;
+  }
+
   html.dark .header {
     background-color: #121212;
     box-shadow:
@@ -104,6 +116,7 @@ import DocsIcon from '../../assets/icons/DocsIcon.astro';
     align-items: center;
     gap: 8px;
     font-weight: 800;
+    flex-shrink: 0;
     cursor: pointer;
     min-height: 48px;
     width: fit-content;

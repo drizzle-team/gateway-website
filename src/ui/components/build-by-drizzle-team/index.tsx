@@ -64,7 +64,7 @@ export const BuiltByDrizzleTeam = () => {
       </div>
       <a
         className="mt-8"
-        href="https://railway.com/deploy/drizzle-studio-gateway?referralCode=eobqmj&utm_medium=integration&utm_source=template&utm_campaign=generic"
+        href="https://railway.com/new/template/drizzle-studio-gateway?referralCode=eobqmj&utm_medium=integration&utm_source=button&utm_campaign=drizzle-studio-gateway"
         target="_blank"
         onClick={() => {
           (window as any)?.trackCustomEvent?.("click-deploy-railway");
@@ -72,6 +72,17 @@ export const BuiltByDrizzleTeam = () => {
       >
         <img src="https://railway.com/button.svg" alt="Deploy on Railway" />
       </a>
+      <Button
+        className="h-7 text-muted-foreground"
+        variant="link"
+        size="sm"
+        onClick={() => {
+          (window as any)?.trackCustomEvent?.("click-documentation");
+          location.href = "/docs/railway";
+        }}
+      >
+        Documentation
+      </Button>
       <div className="flex flex-col items-end justify-center w-full px-[55px] mt-[52px]">
         <Button
           variant="link"
