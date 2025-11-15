@@ -28,7 +28,7 @@ docker run -d \
 mkdir drizzle-gateway
 cd drizzle-gateway
 
-curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.6-linux-arm64
+curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.1.0-linux-arm64
 
 chmod +x start
 ./start
@@ -40,7 +40,7 @@ chmod +x start
 mkdir drizzle-gateway
 cd drizzle-gateway
 
-curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.6-linux-x64
+curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.1.0-linux-x64
 
 chmod +x start
 ./start
@@ -52,7 +52,7 @@ chmod +x start
 mkdir drizzle-gateway
 cd drizzle-gateway
 
-curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.6-macos-arm64
+curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.1.0-macos-arm64
 
 chmod +x start
 ./start
@@ -64,7 +64,7 @@ chmod +x start
 mkdir drizzle-gateway
 cd drizzle-gateway
 
-curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.0.6-macos-x64
+curl -Lo start https://pub-e240a4fd7085425baf4a7951e7611520.r2.dev/drizzle-gateway-1.1.0-macos-x64
 
 chmod +x start
 ./start
@@ -91,6 +91,16 @@ You can provide `MASTERPASS` env variably to have protected admin access, it wil
 }} />
 ## Changelog
 Subscribe to updates on [Twitter](https://twitter.com/DrizzleORM) or [Discord](https://driz.link/discord)
+
+#### `v1.1.0 15/11/2025`
+- Enhanced range selection for copying/pasting data between cells.
+- Reworked the schema viewer in the SQL console.
+- Added Explain/Analyze support in the SQL console.
+- Added support for CSV files import.
+- Added support for SQL files import in the SQL Console.
+- Improved performance for tables containing long values.
+- Added SQL editor for default values and generated expressions.
+- Fixed an issue with multi-dimensional arrays.
 
 #### `v1.0.6 16/09/2025`
 - Reduced image size after rapid increase in version `1.0.5`.\
