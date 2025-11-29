@@ -1,0 +1,16 @@
+# How It Works?
+ 
+Drizzle Studio server hosts an admin panel, which you can visit on `host:port`.
+
+![Database list](@/assets/images/db-list.png)
+
+![Studio view](@/assets/images/studio-view.png)
+
+Drizzle Gateway is compatible with both `arm` and `amd` architectures, you can use it on both MacOS(intel/m chips) and linux, whichever you prefer.
+
+It runs a Drizzle Gateway Server on `:4983` port, you can override it by providing `PORT` environment variable if needed.
+IMPORTANT: make sure to mount a persistent storage with `/app` root for Docker container, it’s required to have a place where to store your session and recover on server restarts.
+
+To override `/app` root path - provide `STORE_PATH` environment variable.
+
+You can provide `MASTERPASS` env variably to have protected admin access, it will also unlock the `passcode` feature which you will be able to set for others to have protected access and without ability to change passcode.

@@ -1,4 +1,8 @@
 [
   "meet drizzle gateway",
-  ["railway", "Railway"]
+  ["how-it-works", "How It Works"],
+  ["railway", "Railway"],
+  ["docker", "Docker"],
+  ["binary", "Binary"],
+  ["changelog", "Changelog"]
 ]

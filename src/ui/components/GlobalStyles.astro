@@ -1,3 +1,56 @@
+<!-- STYLES FOR BANNER  -->
+<style is:global lang="scss">
+  body:has(#banner) {
+    margin-top: 104px;
+    #header {
+      top: 40px;
+    }
+
+    .fixed-container {
+      top: 104px;
+    }
+
+    .aside-right {
+      height: calc(100vh - 104px);
+    }
+
+    .aside-scroll {
+      height: calc(100dvh - 104px);
+    }
+
+    @media screen and (max-width: 768px) {
+      #aside {
+        height: calc(100% - 104px);
+      }
+    }
+  }
+
+  body {
+    margin-top: 64px;
+  }
+
+  #header {
+    top: 0;
+  }
+
+  .fixed-container {
+    top: 64px;
+  }
+
+  .aside-scroll {
+    height: calc(100dvh - 64px);
+  }
+
+  .aside-right {
+    height: calc(100vh - 64px);
+  }
+
+  @media screen and (max-width: 768px) {
+    #aside {
+      height: calc(100% - 64px);
+    }
+  }
+</style>
 <style is:global>
   @font-face {
     font-family: "Menlo";
@@ -28,6 +81,15 @@
     display: block;
   }
 
+  [type="button"],
+  [type="reset"],
+  [type="submit"],
+  button {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+  }
+
   [tabindex]:not([tabindex="-1"]),
   a,
   button,
@@ -49,6 +111,7 @@
   :after,
   :before {
     box-sizing: border-box;
+    border: 0 solid #e5e7eb;
   }
 
   audio,
@@ -128,12 +191,16 @@
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
     line-height: 1.5;
-    scroll-padding-top: 64px;
+    scroll-padding-top: 104px;
     overflow-x: hidden;
   }
 
   body {
     line-height: inherit;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
   }
 
   code {
@@ -196,24 +263,102 @@
     background-color: #ffffff;
   }
 
+  html[class~="dark"] .search-wrap .DocSearch-Button {
+    background-color: rgba(249, 250, 251, 0.1) !important;
+  }
+
+  html[class~="dark"] .search-wrap .DocSearch-Button-Key {
+    background: #484848;
+    box-shadow: none;
+    color: #fff;
+    box-shadow:
+      inset 0 -2px 0 0 rgba(249, 250, 251, 0.1),
+      0 1px 2px 1px #484848;
+  }
+
   .d-flex {
     display: flex !important;
   }
 
-  input:focus-visible {
-    box-shadow: none !important;
+  .search-wrap {
+    width: 256px;
   }
 
+  .search-wrap .DocSearch-Button {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #8c919c;
+    border-radius: 4px;
+    width: 256px;
+    height: 33px;
+    margin: 0;
+  }
 
-  code {
-    overflow-wrap: break-word;
-    border-radius: 2px;
-    border: 1px solid #21272e1f;
-    background: #fafafa;
-    padding: 3px 4px;
-    font-size: 13px;
-    color: #0a0a0a;
-    line-height: normal;
+  .search-wrap .DocSearch-Button:hover {
+    box-shadow: none !important;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #8c919c !important;
+  }
+
+  .search-wrap .DocSearch-Button-Placeholder {
+    font-size: 14px !important;
+  }
+
+  .search-wrap .DocSearch-Button svg {
+    color: #8c919c !important;
+  }
+
+  html[class~="dark"] .search-wrap--centered .DocSearch-Button {
+    background-color: #1c1c1c !important;
+  }
+
+  html[class~="dark"] .search-wrap--centered .DocSearch-Button-Key {
+    background: #484848;
+    box-shadow: none;
+    color: #c4c5c6;
+    box-shadow:
+      inset 0 -2px 0 0 rgba(249, 250, 251, 0.1),
+      0 1px 2px 1px #484848;
+  }
+
+  .search-wrap--centered {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .search-wrap--centered .DocSearch-Button {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #8c919c;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    height: 33px;
+    margin: 0;
+  }
+
+  .search-wrap--centered .DocSearch-Button:hover {
+    box-shadow: none !important;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #8c919c !important;
+  }
+
+  html.dark .search-wrap--centered .DocSearch-Button-Placeholder {
+    color: #909090;
+  }
+
+  .search-wrap--centered .DocSearch-Button-Placeholder {
+    font-size: 14px !important;
+  }
+
+  html.dark .search-wrap--centered .DocSearch-Button svg {
+    color: #909090 !important;
+  }
+
+  .search-wrap--centered .DocSearch-Button svg {
+    color: #8c919c !important;
+  }
+
+  input:focus-visible {
+    box-shadow: none !important;
   }
 
   /* CALLOUT */
@@ -838,8 +983,6 @@
     margin: 6px 0;
     height: auto;
     overflow-y: hidden;
-    .header {
-    }
     pre {
       background-color: #fafafa !important;
       -webkit-font-smoothing: auto;
@@ -872,7 +1015,7 @@
     .highlighted {
       box-shadow:
         rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-        rgba(55, 40, 40, 0) 0px 0px 0px 0px,
+        rgba(0, 0, 0, 0) 0px 0px 0px 0px,
         rgba(0, 107, 230, 0.5) 2px 0px 0px 0px inset;
       background-color: rgba(0, 107, 230, 0.1);
       // color: rgba(0, 107, 230, 0.5);
@@ -1071,88 +1214,6 @@
     }
   }
 </style>
-<style is:global>
-  .bigcodetabs_wrapper {
-    margin-top: 1.5rem;
-    width: 100%;
-  }
-
-  .bigcodetabs_wrapper pre {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  .bigcodetabs_wrapper figure {
-    margin-top: 0;
-  }
-
-  .bigcodetabs_tabs {
-    margin: auto;
-    display: flex;
-    max-width: 768px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-    margin-bottom: 40px;
-  }
-
-  html[class~="dark"] .bigcodetabs_tab:hover,
-  html[class~="dark"] .bigcodetabs_tab--active:hover,
-  html[class~="dark"] .bigcodetabs_tab--active {
-    background-color: #282828;
-    color: rgb(225, 227, 230);
-  }
-
-  html[class~="dark"] .bigcodetabs_tab {
-    background-color: #1c1c1c;
-    color: rgb(225, 227, 230);
-  }
-
-
-  .bigcodetabs_tab,
-  .bigcodetabs_tab--active {
-    cursor: pointer;
-    border-radius: 4px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    background-color: #f6f6f7;
-    color: rgb(34, 34, 34);
-  }
-
-  .bigcodetabs_tab:hover,
-  .bigcodetabs_tab--active:hover,
-  .bigcodetabs_tab--active {
-    background-color: #eff0f3;
-    color: rgb(34, 34, 34);
-  }
-
-  .bigcodetab_wrapper > figure {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .bigcodetab_wrapper > figure > pre {
-    border-radius: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .bigcodetab_wrapper > figure:last-child > pre {
-    border-bottom-left-radius: 0.75rem;
-    border-bottom-right-radius: 0.75rem;
-  }
-
-  .bigcodetab_wrapper > figure:not(:last-child) {
-    border-bottom: 1px solid #e0e8f6;
-  }
-
-  html[class~="dark"] .bigcodetab_wrapper > figure:not(:last-child) {
-    border-bottom: 1px solid #2e3e49;
-  }
-</style>
-
 <!-- COPY BUTTON STYLES -->
 <style lang="scss" is:global>
   html[class~="dark"] .button-wrap:hover {
@@ -1226,5 +1287,28 @@
     width: 16px;
     height: 16px;
     pointer-events: none;
+  }
+
+  html.dark .border-highlight::before {
+    --gradient-0: #EE9A01;
+    --gradient-1: #2E1A00;
+  }
+  .border-highlight::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    height: 240px;
+    --gradient-0: #F5A015;
+    --gradient-1: #FDE1B5;
+    background-image: conic-gradient(from 0deg at 50% 50%, var(--gradient-0) 0deg, var(--gradient-1) 45deg, var(--gradient-1) 135deg, var(--gradient-0) 180deg, var(--gradient-1) 225deg, var(--gradient-1) 315deg, var(--gradient-0) 360deg);
+    background-size: 240px 240px;
+    background-position: center center;
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.45);
+    animation: spin 10s linear infinite;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.2s;
   }
 </style>

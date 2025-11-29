@@ -63,7 +63,7 @@ export const BuiltByDrizzleTeam = () => {
         </div>
       </div>
       <a
-        className="mt-8"
+        className="!mt-8"
         href="https://railway.com/new/template/drizzle-studio-gateway?referralCode=eobqmj&utm_medium=integration&utm_source=button&utm_campaign=drizzle-studio-gateway"
         target="_blank"
         onClick={() => {
@@ -83,18 +83,6 @@ export const BuiltByDrizzleTeam = () => {
       >
         Documentation
       </Button>
-      <div className="flex flex-col items-end justify-center w-full px-[55px] mt-[52px]">
-        <Button
-          variant="link"
-          className="h-fit p-0 text-muted-foreground"
-          onClick={() => {
-            setOpen(true);
-            (window as any)?.stonks?.event?.("click-love");
-          }}
-        >
-          I love it &#x2661;
-        </Button>
-      </div>
     </>
   );
 };

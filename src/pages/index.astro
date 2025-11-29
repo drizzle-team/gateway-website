@@ -3,7 +3,8 @@ import '@/styles/global.css';
 
 import { BuiltByDrizzleTeam } from '@/ui/components/build-by-drizzle-team';
 import Layout from '../ui/Layout.astro';
-import Main from '@/content/landing/main.mdx';
+import { Image } from 'astro:assets';
+import studioViewImage from '@/assets/images/studio-view.png';
 ---
 
 <Layout title="Drizzle Gateway">
@@ -39,7 +40,14 @@ import Main from '@/content/landing/main.mdx';
     </div>
     <div class="documentation-container">
       <div class="documentation-content">
-        <Main />
+        <div class="!border-[#E4E4E5] !border !mt-10 [.dark_&]:!border-[#292929] rounded-md overflow-hidden">
+          <div class="flex gap-1.5 items-center !h-[28px] !px-2 !border-b !border-[#E4E4E5] [.dark_&]:!border-[#292929] !bg-[#F3F3F3] [.dark_&]:!bg-[#171717]">
+            <div class="bg-red-500 rounded-full size-2.5" />
+            <div class="bg-yellow-500 rounded-full size-2.5" />
+            <div class="bg-green-500 rounded-full size-2.5" />
+          </div>
+          <Image src={studioViewImage} alt="Studio View" />
+        </div>
       </div>
     </div>
   </div>
