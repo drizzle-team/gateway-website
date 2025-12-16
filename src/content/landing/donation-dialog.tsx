@@ -103,7 +103,7 @@ export const DonationDialog = ({ open, setOpen }: Props) => {
                         }}
                       >
                         <img
-                          className="size-10 rounded-full border-2 border-background grayscale hover:grayscale-0"
+                          className="!size-10 rounded-full border-2 border-background grayscale hover:grayscale-0"
                           style={{
                             objectFit: "cover",
                             objectPosition: "center",
