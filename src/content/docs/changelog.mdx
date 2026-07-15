@@ -1,6 +1,19 @@
 # Changelog
 Subscribe to updates on [Twitter](https://twitter.com/DrizzleORM) or [Discord](https://driz.link/discord)
 
+#### `v1.4.0 15/07/2026`
+- Added the ability to copy rows to the clipboard in addition to exporting.
+- Added drag-and-drop support for column ordering.
+- Added a subview in the SQL console results panel to show which query a result belongs to.
+- Added `Cmd/Ctrl + A` shortcut for selecting all rows.
+- Added `Cmd/Ctrl + N` shortcut for adding a new row.
+- Added `Cmd/Ctrl + F` shortcut for filtering rows.
+- Added enum values to the filters.
+- Added MariaDB support.
+- Added a dedicated connection for secondary queries (such as count queries) to prevent them from interfering with primary queries.
+- Reworked refresh shortcuts: `Cmd/Ctrl + R` refreshes rows, while `Shift + Cmd/Ctrl + R` refreshes schema and rows.
+- Improved support for SQLite `BLOB` columns.
+
 #### `v1.3.0 09/06/2026`
 - Reworked pagination.
 - Added column reordering.
